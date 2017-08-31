@@ -2,7 +2,7 @@
  * ViewUtils
  * @flow
  **/
-'use strict'
+'use strict';
 
 import React  from 'react';
 import {
@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 
 export default class ViewUtils {
+
     static getSettingItem(callBack, icon, text, tintStyle, expandableIco) {
         return (
             <TouchableHighlight
@@ -74,4 +75,4 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row'
     },
-})
+});

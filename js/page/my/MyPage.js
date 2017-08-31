@@ -49,10 +49,10 @@ export default class MyPage extends Component {
         if (changedValues.my.themeChange && preTab.styles) {
             this.setState({
                 theme: preTab
-            })
+            });
             return;
         }
-    }
+    };
 
     onClick(tab) {
         let TargetComponent, params = {...this.props, theme: this.state.theme, menuType: tab};

@@ -76,6 +76,7 @@ const FLAG = {
 };
 
 export default class AboutMePage extends Component {
+
     constructor(props) {
         super(props);
         this.aboutCommon = new AboutCommon(props, (dic)=>this.updateState(dic));
@@ -201,7 +202,7 @@ export default class AboutMePage extends Component {
                 FLAG.CONTACT.name, this.props.theme.styles.tabBarSelectedIcon, this.getClickIcon(this.state.showContact))}
             <View style={GlobalStyles.line}/>
             {this.state.showContact ? this.renderItems(FLAG.CONTACT.items, true) : null}
-        </View>
+        </View>;
         return (
             <View style={styles.container}>
                 {this.aboutCommon.render(content, this.state.author)}

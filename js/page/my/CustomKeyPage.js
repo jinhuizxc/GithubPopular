@@ -124,7 +124,7 @@ export default class CustomKeyPage extends Component {
                     {this.renderCheckBox(this.state.dataArray[len - 1])}
                 </View>
             </View>
-        )
+        );
         return views;
 
     }

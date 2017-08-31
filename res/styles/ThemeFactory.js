@@ -30,7 +30,7 @@ export const ThemeFlags = {
     Grey:'#9E9E9E',
     BlueGrey:'#607D8B',
     Black:'#000000'
-}
+};
 
 export default class ThemeFactory {
     // constructor(themeFlag) {

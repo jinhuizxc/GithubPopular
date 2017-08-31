@@ -144,7 +144,7 @@ export default class PopularPage extends Component {
             : null;
         var statusBar={
             backgroundColor:this.state.theme.themeColor,
-        }
+        };
         let navigationBar =
             <NavigationBar
                 title='Popular'
@@ -158,7 +158,7 @@ export default class PopularPage extends Component {
                 {...this.props}
                 onClose={()=> {
                     this.setState({customThemeViewVisible: false})
-                }}/>
+                }}/>;
         return (
             <View style={styles.container}>
                 {navigationBar}
@@ -190,7 +190,7 @@ class PopularTab extends Component {
         if (changedValues.my.themeChange && preTab.styles) {
             this.setState({
                 theme: preTab
-            })
+            });
             this.updateFavorite();//更新favoriteIcon
             return;
         }
@@ -200,7 +200,7 @@ class PopularTab extends Component {
             this.updateFavorite();
         }
 
-    }
+    };
 
     componentDidMount() {
         this.props.homeComponent.addSubscriber(this.onSubscriber);

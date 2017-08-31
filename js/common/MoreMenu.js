@@ -32,7 +32,7 @@ export const MORE_MENU = {
     About:'About',
     Website:'Website',
     Feedback:'Feedback',
-}
+};
 
 export default class MoreMenu extends Component {
     constructor(props) {
@@ -46,7 +46,7 @@ export default class MoreMenu extends Component {
     static propTypes = {
         contentStyle: View.propTypes.style,
         menus:PropTypes.array,
-    }
+    };
 
     open() {
         this.showPopover();

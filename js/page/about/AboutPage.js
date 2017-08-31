@@ -89,7 +89,7 @@ export default class AboutPage extends Component {
             {ViewUtils.getSettingItem(()=>this.onClick(MORE_MENU.About_Author), require('../my/img/ic_insert_emoticon.png'), MORE_MENU.About_Author, this.props.theme.styles.tabBarSelectedIcon)}
             <View style={GlobalStyles.line}/>
             {ViewUtils.getSettingItem(()=>this.onClick(MORE_MENU.Feedback), require('../../../res/images/ic_feedback.png'), MORE_MENU.Feedback, this.props.theme.styles.tabBarSelectedIcon)}
-        </View>
+        </View>;
         return this.aboutCommon.render(content, {
             'name': 'GitHub Popular',
             'description': 'This is a GitHub most popular repositories and trending repositories viewer with React Native.',
