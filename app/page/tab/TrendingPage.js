@@ -14,20 +14,20 @@ import {
     Image
 } from "react-native";
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
-import NavigationBar from '../common/NavigationBar'
-import ViewUtils from '../util/ViewUtils'
-import Popover from "../common/Popover";
-import MoreMenu,{MORE_MENU} from '../common/MoreMenu'
-import TrendingRepoCell from "../common/TrendingRepoCell";
-import RepositoryDetail from "./RepositoryDetail";
-import FavoriteDao from "../expand/dao/FavoriteDao";
-import CustomTheme from "./my/CustomTheme"
-import DataRepository, {FLAG_STORAGE} from '../expand/dao/DataRepository'
-import ProjectModel from "../model/ProjectModel";
-import TimeSpan from '../model/TimeSpan'
-import LanguageDao, {FLAG_LANGUAGE}  from '../expand/dao/LanguageDao'
-import {FLAG_TAB} from './HomePage'
-import GlobalStyles from '../../res/styles/GlobalStyles'
+import NavigationBar from '../../common/NavigationBar'
+import ViewUtils from '../../util/ViewUtils'
+import Popover from "../../common/Popover";
+import MoreMenu,{MORE_MENU} from '../../common/MoreMenu'
+import TrendingRepoCell from "../../common/TrendingRepoCell";
+import RepositoryDetail from "../RepositoryDetail";
+import FavoriteDao from "../../expand/dao/FavoriteDao";
+import CustomTheme from "../my/CustomTheme"
+import DataRepository, {FLAG_STORAGE} from '../../expand/dao/DataRepository'
+import ProjectModel from "../../model/ProjectModel";
+import TimeSpan from '../../model/TimeSpan'
+import LanguageDao, {FLAG_LANGUAGE}  from '../../expand/dao/LanguageDao'
+import {FLAG_TAB} from '../HomePage'
+import GlobalStyles from '../../../res/styles/GlobalStyles'
 
 const API_URL = 'https://github.com/trending/'
 var projectModels = [];
@@ -133,7 +133,7 @@ export default class TrendingPage extends Component {
                     }}>Trending {this.state.timeSpan.showText}</Text>
                     <Image
                         style={{width: 12, height: 12, marginLeft: 5}}
-                        source={require('../../res/images/ic_spinner_triangle.png')}
+                        source={require('../../../res/images/ic_spinner_triangle.png')}
                     />
                 </View>
             </TouchableHighlight>

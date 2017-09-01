@@ -15,19 +15,19 @@ import {
 } from 'react-native'
 
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
-import ViewUtils from '../util/ViewUtils'
-import RepositoryCell from '../common/RepositoryCell'
-import TrendingRepoCell from '../common/TrendingRepoCell'
-import RepositoryDetail from './RepositoryDetail'
-import MoreMenu, {MORE_MENU} from '../common/MoreMenu'
-import {FLAG_TAB} from './HomePage'
-import CustomTheme from "./my/CustomTheme"
-import FavoriteDao from '../expand/dao/FavoriteDao'
-import ProjectModel from '../model/ProjectModel'
-import NavigationBar from '../common/NavigationBar'
-import {FLAG_STORAGE} from '../expand/dao/RepositoryDao'
-import ArrayUtils from '../util/ArrayUtils'
-import GlobalStyles from '../../res/styles/GlobalStyles'
+import ViewUtils from '../../util/ViewUtils'
+import RepositoryCell from '../../common/RepositoryCell'
+import TrendingRepoCell from '../../common/TrendingRepoCell'
+import RepositoryDetail from '../RepositoryDetail'
+import MoreMenu, {MORE_MENU} from '../../common/MoreMenu'
+import {FLAG_TAB} from '../HomePage'
+import CustomTheme from "../my/CustomTheme"
+import FavoriteDao from '../../expand/dao/FavoriteDao'
+import ProjectModel from '../../model/ProjectModel'
+import NavigationBar from '../../common/NavigationBar'
+import {FLAG_STORAGE} from '../../expand/dao/RepositoryDao'
+import ArrayUtils from '../../util/ArrayUtils'
+import GlobalStyles from '../../../res/styles/GlobalStyles'
 
 export default class FavoritePage extends Component {
     constructor(props) {

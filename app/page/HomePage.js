@@ -11,19 +11,20 @@ import {
     View,
 } from 'react-native'
 import TabNavigator from 'react-native-tab-navigator'
-import PopularPage from './PopularPage'
-import TrendingPage from './TrendingPage'
-import FavoritePage from './FavoritePage'
-import MyPage from './my/MyPage'
+import PopularPage from './tab/PopularPage'
+import TrendingPage from './tab/TrendingPage'
+import FavoritePage from './tab/FavoritePage'
+import MyPage from './tab/MyPage'
 
 import ArrayUtils from '../util/ArrayUtils'
 
 export var FLAG_TAB = {
     flag_popularTab: 'flag_popularTab', flag_trendingTab: 'flag_trendingTab',
     flag_favoriteTab: 'flag_favoriteTab', flag_myTab: 'flag_myTab'
-}
+};
 
 export default class HomePage extends Component {
+
     constructor(props) {
         super(props);
         this.subscribers = [];
@@ -50,38 +51,40 @@ export default class HomePage extends Component {
         // if (this.updateFavorite && 'popularTab' === object)this.updateFavorite(object);
 
         if (object !== this.state.selectedTab) {
-            this.subscribers.forEach((item, index, arr)=> {
-                if (typeof(item) == 'function')item(this.state.selectedTab, object);
+            this.subscribers.forEach((item, index, arr) => {
+                if (typeof(item) == 'function') item(this.state.selectedTab, object);
             })
         }
-        if(object===FLAG_TAB.flag_popularTab)this.changedValues.favorite.popularChange=false;
-        if(object===FLAG_TAB.flag_trendingTab)this.changedValues.favorite.trendingChange=false;
+        if (object === FLAG_TAB.flag_popularTab) this.changedValues.favorite.popularChange = false;
+        if (object === FLAG_TAB.flag_trendingTab) this.changedValues.favorite.trendingChange = false;
 
         this.setState({
             selectedTab: object,
         })
 
     }
-    onReStart(jumpToTab){
+
+    onReStart(jumpToTab) {
         this.props.navigator.resetTo({
             component: HomePage,
             name: 'HomePage',
             params: {
                 ...this.props,
-                theme:this.state.theme,
+                theme: this.state.theme,
                 selectedTab: jumpToTab,
             }
         });
     }
+
     onThemeChange(theme) {
-        if (!theme)return;
+        if (!theme) return;
         this.setState({
             theme: theme
-        })
+        });
         this.changedValues.my.themeChange = true;
-        this.subscribers.forEach((item, index, arr)=> {
-            if (typeof(item) == 'function')item(theme);
-        })
+        this.subscribers.forEach((item, index, arr) => {
+            if (typeof(item) == 'function') item(theme);
+        });
         this.changedValues.my.themeChange = false;
     }
 
@@ -107,8 +110,7 @@ export default class HomePage extends Component {
             <View style={styles.container}>
                 <TabNavigator
                     tabBarStyle={{opacity: 0.9,}}
-                    sceneStyle={{paddingBottom: 0}}
-                >
+                    sceneStyle={{paddingBottom: 0}}>
                     {this._renderTab(PopularPage, FLAG_TAB.flag_popularTab, 'Popular', require('../../res/images/ic_polular.png'))}
                     {this._renderTab(TrendingPage, FLAG_TAB.flag_trendingTab, 'Trending', require('../../res/images/ic_trending.png'))}
                     {this._renderTab(FavoritePage, FLAG_TAB.flag_favoriteTab, 'Favorite', require('../../res/images/ic_favorite.png'))}
@@ -119,8 +121,8 @@ export default class HomePage extends Component {
     }
 }
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
+    container: {
+        flex: 1,
         // backgroundColor:'#fff',
     },
     tabBarIcon: {
@@ -132,4 +134,4 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         // tintColor:'#4caf50'
     }
-})
+});

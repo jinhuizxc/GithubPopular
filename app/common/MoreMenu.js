@@ -19,7 +19,7 @@ import CustomKeyPage from "../page/my/CustomKeyPage"
 import SortKeyPagePage from "../page/my/SortKeyPagePage"
 import AboutPage from "../page/about/AboutPage"
 import AboutMePage from "../page/about/AboutMePage"
-import FavoritePage from "../page/FavoritePage"
+import FavoritePage from "../page/tab/FavoritePage"
 import {FLAG_LANGUAGE}  from '../expand/dao/LanguageDao'
 export const MORE_MENU = {
     Custom_Language:'Custom Language',

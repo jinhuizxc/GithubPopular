@@ -7,7 +7,7 @@
 import {
     AppRegistry,
 } from 'react-native'
-import setup from './js/page/setup';
+import setup from './app/page/setup';
 
 
 AppRegistry.registerComponent('GithubPopular', () => setup);

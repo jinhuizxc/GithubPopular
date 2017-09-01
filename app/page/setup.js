@@ -21,7 +21,7 @@ function setup(){
             let Component = route.component;
             return (
                 <Component {...route.params} navigator={navigator}/>
-            );
+            )
         }
         render() {
             return (

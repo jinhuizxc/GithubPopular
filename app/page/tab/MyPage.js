@@ -15,9 +15,9 @@ import {
 } from "react-native";
 import NavigationBar from "../../common/NavigationBar";
 import {MORE_MENU} from "../../common/MoreMenu";
-import CustomKeyPage from "./CustomKeyPage";
-import SortKeyPagePage from "./SortKeyPagePage";
-import CustomThemePage from "./CustomTheme";
+import CustomKeyPage from "../my/CustomKeyPage";
+import SortKeyPagePage from "../my/SortKeyPagePage";
+import CustomThemePage from "../my/CustomTheme";
 import AboutPage from '../about/AboutPage'
 import AboutMePage from '../about/AboutMePage'
 import {FLAG_LANGUAGE} from "../../expand/dao/LanguageDao";
@@ -145,34 +145,34 @@ export default class MyPage extends Component {
                     <Text style={styles.groupTitle}>Custom trending language</Text>
                     {/*Custom Language*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Custom_Language, require('./img/ic_custom_language.png'), 'Custom Language')}
+                    {this.getItem(MORE_MENU.Custom_Language, require('../my/img/ic_custom_language.png'), 'Custom Language')}
                     {/*Sort language*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Sort_Language, require('./img/ic_swap_vert.png'), 'Sort language')}
+                    {this.getItem(MORE_MENU.Sort_Language, require('../my/img/ic_swap_vert.png'), 'Sort language')}
 
                     {/*Custom popular key*/}
                     <Text style={styles.groupTitle}>Custom popular key</Text>
                     {/*custom Key*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Custom_Key, require('./img/ic_custom_language.png'), 'Custom Key')}
+                    {this.getItem(MORE_MENU.Custom_Key, require('../my/img/ic_custom_language.png'), 'Custom Key')}
                     {/*Sort Key*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Sort_Key, require('./img/ic_swap_vert.png'), 'Sort Key')}
+                    {this.getItem(MORE_MENU.Sort_Key, require('../my/img/ic_swap_vert.png'), 'Sort Key')}
                     {/*Remove Key*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Remove_Key, require('./img/ic_remove.png'), 'Remove Key')}
+                    {this.getItem(MORE_MENU.Remove_Key, require('../my/img/ic_remove.png'), 'Remove Key')}
 
                     {/*Setting*/}
                     <Text style={styles.groupTitle}>Setting</Text>
                     {/*Custom theme*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.Custom_Theme, require('./img/ic_view_quilt.png'), 'Custom theme')}
+                    {this.getItem(MORE_MENU.Custom_Theme, require('../my/img/ic_view_quilt.png'), 'Custom theme')}
                     {/*Night mode*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem('about', require('./img/ic_brightness.png'), 'Night mode')}
+                    {this.getItem('about', require('../my/img/ic_brightness.png'), 'Night mode')}
                     {/*About author*/}
                     <View style={GlobalStyles.line}/>
-                    {this.getItem(MORE_MENU.About_Author, require('./img/ic_insert_emoticon.png'), 'About author')}
+                    {this.getItem(MORE_MENU.About_Author, require('../my/img/ic_insert_emoticon.png'), 'About author')}
                     <View style={[{marginBottom: 60}]}/>
                 </ScrollView>
                 {this.renderCustomThemeView()}

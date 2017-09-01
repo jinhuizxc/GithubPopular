@@ -14,25 +14,25 @@ import {
     View,
 } from 'react-native'
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
-import NavigationBar from '../common/NavigationBar'
-import ViewUtils from '../util/ViewUtils'
-import MoreMenu, {MORE_MENU} from '../common/MoreMenu'
-import RepositoryCell from '../common/RepositoryCell'
-import RepositoryDetail from './RepositoryDetail'
-import FavoriteDao from '../expand/dao/FavoriteDao'
-import DataRepository, {FLAG_STORAGE} from '../expand/dao/DataRepository'
-import CustomTheme from "./my/CustomTheme"
-import SearchPage from "./SearchPage"
-import ProjectModel from '../model/ProjectModel'
-import {FLAG_TAB} from './HomePage'
-import LanguageDao, {FLAG_LANGUAGE}  from '../expand/dao/LanguageDao'
-import GlobalStyles from '../../res/styles/GlobalStyles'
-import Utils from '../util/Utils'
+import NavigationBar from '../../common/NavigationBar'
+import ViewUtils from '../../util/ViewUtils'
+import MoreMenu, {MORE_MENU} from '../../common/MoreMenu'
+import RepositoryCell from '../../common/RepositoryCell'
+import RepositoryDetail from '../RepositoryDetail'
+import FavoriteDao from '../../expand/dao/FavoriteDao'
+import DataRepository, {FLAG_STORAGE} from '../../expand/dao/DataRepository'
+import CustomTheme from "../my/CustomTheme"
+import SearchPage from "../SearchPage"
+import ProjectModel from '../../model/ProjectModel'
+import {FLAG_TAB} from '../HomePage'
+import LanguageDao, {FLAG_LANGUAGE}  from '../../expand/dao/LanguageDao'
+import GlobalStyles from '../../../res/styles/GlobalStyles'
+import Utils from '../../util/Utils'
 
-const API_URL = 'https://api.github.com/search/repositories?q='
-const QUERY_STR = '&sort=stars'
-var favoriteDao = new FavoriteDao(FLAG_STORAGE.flag_popular)
-var dataRepository = new DataRepository(FLAG_STORAGE.flag_popular)
+const API_URL = 'https://api.github.com/search/repositories?q=';
+const QUERY_STR = '&sort=stars';
+var favoriteDao = new FavoriteDao(FLAG_STORAGE.flag_popular);
+var dataRepository = new DataRepository(FLAG_STORAGE.flag_popular);
 
 export default class PopularPage extends Component {
     constructor(props) {
@@ -59,14 +59,14 @@ export default class PopularPage extends Component {
         if (changedValues.my.themeChange && preTab.styles) {
             this.setState({
                 theme: preTab
-            })
+            });
             return;
         }
         if (currentTab != FLAG_TAB.flag_popularTab)return;
         if (FLAG_TAB.flag_popularTab === currentTab && changedValues.my.keyChange) {//从设置页面切换过来
             this.props.homeComponent.onReStart(FLAG_TAB.flag_popularTab);
         }
-    }
+    };
 
     loadLanguage() {
         this.languageDao.fetch().then((languages)=> {
@@ -98,7 +98,7 @@ export default class PopularPage extends Component {
                     <View style={{padding:5}}>
                         <Image
                             style={{width: 24, height: 24}}
-                            source={require('../../res/images/ic_search_white_48pt.png')}
+                            source={require('../../../res/images/ic_search_white_48pt.png')}
                         />
                     </View>
                 </TouchableHighlight>

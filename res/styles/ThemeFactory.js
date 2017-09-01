@@ -41,6 +41,7 @@ export default class ThemeFactory {
     static createTheme(themeFlag) {
         return {
             themeColor:themeFlag,
+
             styles:StyleSheet.create({
                 selectedTitleStyle:{
                     color: themeFlag
@@ -54,7 +55,6 @@ export default class ThemeFactory {
                 themeColor:{
                     color:themeFlag
                 },
-
             })
         }
     }
